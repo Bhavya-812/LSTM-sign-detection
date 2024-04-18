@@ -54,10 +54,10 @@ with mp_hands.Hands(
         # 2. Prediction logic
         keypoints = extract_keypoints(results)
         sequence.append(keypoints)
-        sequence = sequence[-30:]
+        sequence = sequence[-80:]
 
         try: 
-            if len(sequence) == 30:
+            if len(sequence) == 80:
                 res = model.predict(np.expand_dims(sequence, axis=0))[0]
                 print(actions[np.argmax(res)])
                 predictions.append(np.argmax(res))
