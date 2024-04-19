@@ -3,13 +3,13 @@ This is a LSTM-based model for sign language detection project effectively captu
 Complete Architecture of the Project:
 1.	Data Collection:
         •	Hand gestures are collected using a webcam and saved as image sequences corresponding to different gestures (A-Z).
-2.	Data Preprocessing:
+3.	Data Preprocessing:
         •	Keypoints are extracted from the hand landmarks detected in the images using MediaPipe.
         •	Keypoints sequences are processed and saved as NumPy arrays, representing the temporal aspect of gestures.
-3.	Model Training:
+4.	Model Training:
         •	The LSTM-based deep learning model is constructed and trained using the processed data.
         •	The model learns to recognize sign language gestures based on the sequential patterns in the input sequences of keypoints.
-4.	Real-Time Detection:
+5.	Real-Time Detection:
         •	The trained model is deployed in an application that captures live video frames from a webcam.
         •	Hand landmarks are detected in real-time using MediaPipe, and sequences of keypoints are fed into the trained model.
         •	The model predicts the gesture being performed, and the results are displayed on the screen along with their probabilities.
